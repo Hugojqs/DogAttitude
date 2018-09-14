@@ -5,7 +5,7 @@ var pug = require('gulp-pug');
 var uglify = require('gulp-uglify');
 var connect = require('gulp-connect');
 
-gulp.task('default', ['build', 'sass' , 'js', 'imp-bootstrap', 'livereload', 'watch', 'connect'])
+
 
 // Compilation HTML -- .pug to .html
 gulp.task('build', () => {
@@ -35,7 +35,7 @@ gulp.task('imp-bootstrap', () => {
         "node_modules/bootstrap/dist/css/bootstrap.min.css",
         "node_modules/bootstrap/dist/js/bootstrap.min.js"
     ])
-    .pipe(gulp.dest('/vendors/bootstrap'))
+    .pipe(gulp.dest('dist/vendors/bootstrap'))
 })
 
 // Live reload and watcher -- localhost:8080
@@ -51,9 +51,15 @@ gulp.task('livereload', function (){
     gulp.watch('./views/*.pug', ['build']);
   });
 
+
   gulp.task('connect', function(){
     connect.server({
       root: 'dist',
       livereload: true
     });
   });
+
+
+
+
+  gulp.task('default', ['connect', 'watch' , 'sass', 'js', 'imp-bootstrap', 'build'])
