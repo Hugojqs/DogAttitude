@@ -3,7 +3,7 @@ html
 
     // Head
     head
-        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8", charset="utf-8")
 
         // Meta
         title Dog Attitude - Salon de toilettage
@@ -13,8 +13,9 @@ html
         
         // Styles
         block styles
+            link(rel="stylesheet", href="css/main.css")
             link(rel="stylesheet", href="vendors/bootstrap/bootstrap.min.css")
-            link(rel="stylesheet", href="css/style.css")
+            
 
     // Body
     body
@@ -29,7 +30,8 @@ html
 
         // Scripts
         block scripts
-            script(src="vendors/bootstrap/bootstrap.min.js")
+            script(src="/vendors/jquery/jquery.min.js")
+            script(src="/vendors/bootstrap/bootstrap.min.js")
             script(src="js/app.js")
         
         

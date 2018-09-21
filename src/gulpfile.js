@@ -38,6 +38,15 @@ gulp.task('imp-bootstrap', () => {
     .pipe(gulp.dest('dist/vendors/bootstrap'))
 })
 
+// Importer Jquery
+gulp.task('imp-jquery', () => {
+    return gulp.src([
+        "node_modules/jquery/dist/jquery.min.js",
+    ])
+    .pipe(gulp.dest('dist/vendors/jquery'))
+})
+
+
 // Live reload and watcher -- localhost:8080
 gulp.task('livereload', function (){
     gulp.src('./dist/**/*')
@@ -61,5 +70,4 @@ gulp.task('livereload', function (){
 
 
 
-
-  gulp.task('default', ['connect', 'watch' , 'sass', 'js', 'imp-bootstrap', 'build'])
+  gulp.task('default', ['connect', 'watch' , 'sass', 'js', 'imp-bootstrap', 'imp-jquery', 'build'])
