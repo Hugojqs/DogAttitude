@@ -24,7 +24,7 @@ gulp.task("sass", () => {
 // Compilation JS -- .js
 gulp.task("js", () => {
   return gulp
-    .src("js/**.js")
+    .src("js/**/*.js")
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
@@ -48,13 +48,13 @@ gulp.task("imp-jquery", () => {
 
 // Live reload and watcher -- localhost:8080
 gulp.task("livereload", function() {
-  gulp.src("./dist/**/*").pipe(connect.reload());
+  gulp.src("./dist/**/*").pipe(connect.reload())
 });
 
 gulp.task("watch", function() {
   gulp.watch("./sass/**/*.scss", ["sass"]);
   gulp.watch("./dist/**/*", ["livereload"]);
-  gulp.watch("./js/*.js", ["js"]);
+  gulp.watch("./js/**/*.js", ["js"]);
   gulp.watch("./views/**/*.pug", ["build"]);
 });
 

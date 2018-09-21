@@ -1,0 +1,1 @@
+$(window).on("scroll",function(a){0<this.scrollY?($("header").addClass("bg-white").removeClass("bg-transparent"),$("header nav").addClass("navbar-light")):($("header").removeClass("bg-white").addClass("bg-transparent"),$("header nav").removeClass("navbar-light"))}),$("a[href='"+window.location.pathname+"']").addClass("active");

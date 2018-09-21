@@ -1,11 +1,17 @@
-- var items = {"/": "Accueil", "services.html": "Services", "contact.html": "Contact"}
+- var items = {"/": "Accueil", "/services.html": "Services", "/blog.html": "Blog", "/contact.html": "Contact"}
 
 
 
-header(role="banner")
-    h5 Dog Attitude
-
+header(role="banner" class="bg-transparent")
     // NavBar
-    nav(role="navigation")
-        each value, key in items
-            a(class="" href=key) #{value}
+    nav(role="navigation" class="navbar navbar-expand-md bg-transparent")
+        a(class="navbar-brand" href="/") Dog Attitude  
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+            span(class="navbar-toggler-icon")
+        div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+            div(class="navbar-nav")
+                each value, key in items
+                    li(class='nav-item' )
+                        a(class="nav-link" href=key) #{value}
+
+
