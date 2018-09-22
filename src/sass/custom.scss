@@ -1,11 +1,44 @@
-// Surcharge Bootstrap
-
+// Surcharge Variables Bootstrap
 $transparent: transparent;
 $primary: #e91e63;
 $secondary: #3c4858;
 $gray-500: #999999;
 
 $font-family-sans-serif: Montserrat;
+$font-size-base: 0.9rem;
+
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+// Surcharge Class Bootstrap
+@media (max-width: 576px) {
+    .container {
+      width: 90%;
+    } 
+}
+
+
+.btn{
+    padding: 10px 15px;
+}
+.navbar-toggler{
+    padding: 5px;
+    border: white solid 2px;
+    border-radius: 100%;
+}
+.navbar-toggler .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-light .navbar-toggler{
+    border-color: $primary
+}
+.navbar-light .navbar-toggler .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='"+$primary+"' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.carousel-caption{
+    bottom: 25%;
+    right: auto;
+    text-align: left;
+}

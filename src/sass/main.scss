@@ -4,17 +4,21 @@ body{
     background-color: $secondary !important;
 }
 
+/*** Class Generic ***/
+.custom-margin-top-100{
+    margin-top: 100px;
+}
+
 /*** Header - NavBar ***/
 header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
     background-color: transparent;
     transition: all 0.4s;
     nav{
-        width: 80%;
-        margin: auto;
         padding: 0.8rem 1rem !important;
 
         div.navbar-collapse{
@@ -58,7 +62,7 @@ header{
         width: 0%;
         transition: width 0.2s;
     }
-    .navbar-nav a.nav-link:hover::after{
+    .navbar-nav a.nav-link:hover::after, a.nav-link.active::after{
         width: 15px;
     }
     nav.navbar-light > a.navbar-brand{
@@ -77,14 +81,47 @@ header:not(.bg-transparent){
 }
 
 
-/*** First section ***/
-section.wrapper-image{
-    background-image: url(http://toilettage-st-egreve.fr/wp-content/uploads/2017/11/accueil-dog-attitude-toiletteur-grenoble.jpg);
-    background-color: rgba(0, 0, 0, 0.5) !important;
+/*** Home Page - First section ***/
+
+section#section-first{
+    background-image: url("/img/dog-attitude-toiletteur-grenoble-accueil.jpg");
+    background-color: rgba(0, 0, 0, 0.3) !important;
     background-blend-mode: color;
     background-size: cover;
+    background-position: center right;
+    padding: 180px 0px;
 }
 
+/*** Section de transition - Horaires ***/
+section#section-second{
+    padding: 18px 5px 10px
+}
+
+/*** Carousel Services ***/
+.carousel-item img{
+    width: 100%;
+}
+.custom-carousel-title{
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    padding: 20px 50px 20px 15%;
+    top: 15%;
+    h2{
+        margin-bottom: 0px;
+    }
+}
+.custom-carousel-caption{
+
+    h2{
+        font-size: 4.5rem;
+        margin-bottom: 50px;
+        opacity: 0.8;
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
 
 p{
     margin-top: 500% !important;

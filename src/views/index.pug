@@ -14,10 +14,20 @@ html(lang="fr")
         
         // Main
         main(role="main")
-            section.wrapper-image
-                    h1.col-5 Le bien-être de votre compagnon enfin à portée de griffe
-        
-            section
+            section(id="section-first")
+                article.container
+                    div.row.no-gutters
+                        h1.col-12.text-white.font-weight-bold Le bien-être de <br> votre compagnon
+                        h2.col-12.text-white.font-weight-normal enfin à portée de griffe
+                        a(class="btn btn-primary custom-margin-top-100" href="/contact.html") Prendre rendez-vous
+            
+            section(id="section-second" class="bg-white")
+                include components/sections/_transition.pug
+
+            section(id="section-third")
+                include components/sections/_carousel.pug
+                
+            section    
                 p g
             
         // Footer

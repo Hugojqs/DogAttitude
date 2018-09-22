@@ -46,6 +46,11 @@ gulp.task("imp-jquery", () => {
     .pipe(gulp.dest("dist/vendors/jquery"));
 });
 
+gulp.task("img", () =>{
+  return gulp.src("img/**/*")
+  .pipe(gulp.dest("dist/img"))
+})
+
 // Live reload and watcher -- localhost:8080
 gulp.task("livereload", function() {
   gulp.src("./dist/**/*").pipe(connect.reload())
@@ -56,6 +61,7 @@ gulp.task("watch", function() {
   gulp.watch("./dist/**/*", ["livereload"]);
   gulp.watch("./js/**/*.js", ["js"]);
   gulp.watch("./views/**/*.pug", ["build"]);
+  gulp.watch("./img/**/*", ["img"]);
 });
 
 gulp.task("connect", function() {
@@ -72,5 +78,6 @@ gulp.task("default", [
   "js",
   "imp-bootstrap",
   "imp-jquery",
+  "img",
   "build"
 ]);
