@@ -1,0 +1,21 @@
+- var testimonial1 = {img: "img/carre.jpg", alt: "Image", name: "", description: ""}
+- var testimonial2 = {img: "img/carre.jpg", alt: "Image", name: "", description: ""}
+- var testimonial3 = {img: "img/carre.jpg", alt: "Image", name: "", description: ""}
+
+- var testimonials = {testimonial1, testimonial2, testimonial3}
+
+
+article.container.custom-padding-top-100
+    h2.text-center.font-weight-bold.text-secondary Ce que vous pensez du salon
+    h5.text-center.text-secondary Tous les témoignages sont certifiés authentiques par Google et Facebook
+    div.row.justify-content-center.custom-testimonial
+        each testimonial in testimonials
+            div.col-xl-4.col-md-6.col-sm-12
+                div.card
+                    div.card-header
+                        img(class="img-thumbnail" src=testimonial.img, alt=testimonial.alt)
+
+                    div.card-body
+                        h6.card-title.text-secondary.font-weight-bold
+                        p.card-description.font-weight-light
+

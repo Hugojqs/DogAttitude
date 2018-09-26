@@ -1,6 +1,6 @@
 /*** Header - Menu ***/
 $(document).ready(function() {
-  $(window).on("scroll", function(e) {
+  $(window).on("scroll load", function(e) {
     if (this.scrollY > 0) {
       $("header")
         .addClass("bg-white")

@@ -8,6 +8,9 @@ body{
 .custom-margin-top-100{
     margin-top: 100px;
 }
+.custom-padding-top-100{
+    padding-top: 100px;
+}
 
 /*** Header - NavBar ***/
 header{
@@ -84,12 +87,12 @@ header:not(.bg-transparent){
 /*** Home Page - First section ***/
 
 section#section-first{
-    background-image: url("/img/dog-attitude-toiletteur-grenoble-accueil.jpg");
+    background-image: url("/img/dog-attitude-toiletteur-grenoble.jpg");
     background-color: rgba(0, 0, 0, 0.3) !important;
     background-blend-mode: color;
     background-size: cover;
     background-position: center right;
-    padding: 180px 0px;
+    padding: 230px 0px;
 }
 
 /*** Section de transition - Horaires ***/
@@ -98,31 +101,76 @@ section#section-second{
 }
 
 /*** Carousel Services ***/
-.carousel-item img{
-    width: 100%;
-}
 .custom-carousel-title{
     display: inline-block;
     position: absolute;
     z-index: 1;
     padding: 20px 50px 20px 15%;
-    top: 15%;
+    top: 100px;
     h2{
         margin-bottom: 0px;
     }
 }
+.carousel-item::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: color;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
 .custom-carousel-caption{
-
-    h2{
+    h3{
         font-size: 4.5rem;
         margin-bottom: 50px;
         opacity: 0.8;
+        line-height: 4rem !important;
     }
-    h3{
+    h4{
         font-size: 2rem;
+        padding-left: 0px !important;
+        margin-bottom: 50px;
+    }
+}
+@media all and (max-width: 576px){
+    .carousel-caption{
+        left: 10%;
+        right: 10% !important;
+    }
+    .custom-carousel-caption{
+        h3{
+            font-size: 3rem;
+            line-height: 3rem !important;
+        }
+    }
+    .carousel-control-next, .carousel-control-prev{
+        display: none !important;
     }
 }
 
-p{
-    margin-top: 500% !important;
+
+/*** Testimonial ***/
+.card, .card-header, .card-body{
+    border: none;
+    background-color: $white
+}
+.card{
+    margin-top: 30px;
+    text-align: center;
+}
+.card-header{
+    text-align: center;
+    margin-bottom: 10px;
+
+    img.img-thumbnail{
+        padding: 0;
+        border: none;
+        border-radius: 100%;
+        box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    }
+}
+.card-title{
+    text-transform: capitalize;
 }

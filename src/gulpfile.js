@@ -25,7 +25,7 @@ gulp.task("sass", () => {
 gulp.task("js", () => {
   return gulp
     .src("js/**/*.js")
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
 
@@ -61,7 +61,7 @@ gulp.task("watch", function() {
   gulp.watch("./dist/**/*", ["livereload"]);
   gulp.watch("./js/**/*.js", ["js"]);
   gulp.watch("./views/**/*.pug", ["build"]);
-  gulp.watch("./img/**/*", ["img"]);
+  gulp.watch("./img/**/*.**", ["img"]);
 });
 
 gulp.task("connect", function() {
