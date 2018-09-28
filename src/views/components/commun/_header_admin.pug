@@ -1,0 +1,12 @@
+- var items = {"/statistiques.html": "Statistiques", "/gestion-des-droits.html": "Gestion des droits utilisateurs"}
+
+header(role="banner")
+    nav(role="navigation" class="navbar navbar-expand-md container")
+        a(class="btn btn-primary" href="/") Retour au site  
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+            span(class="navbar-toggler-icon")
+        div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+            ul(class="navbar-nav")
+                each value, key in items
+                    li(class='nav-item nav-item-admin' )
+                        a(class="nav-link" href=key) #{value}
