@@ -396,3 +396,45 @@ footer{
         }
     }
 }
+
+/*** Page Services ***/
+$services-images-lists: 
+    url(../img/slider/dog-attitude-toiletteur-grenoble-slider_02.jpg), 
+    url(../img/slider/dog-attitude-toiletteur-grenoble-slider.jpg), 
+    url(../img/slider/dog-attitude-toiletteur-grenoble-slider_03.jpg), 
+    url(../img/slider/dog-attitude-toiletteur-grenoble-slider_04.jpg), 
+    url(../img/slider/dog-attitude-toiletteur-grenoble-slider_05.jpg), 
+    url(../img/blog/dog-attitude-toiletteur-grenoble-blog-2.jpeg);
+
+
+@for $i from 1 through length($services-images-lists){
+    .services:nth-child(#{$i}) > div{
+        background-image: nth($services-images-lists, $i);
+    }
+}
+
+.services{
+    padding: 15px;
+    .services-card{
+        padding: 50px;
+        margin: 10px;
+        border-radius: 6px;
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: color;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: all 0.2s;
+    }
+    .services-card:hover{
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        margin-top: 0px;
+    }
+    h3{
+         text-align: center;
+         color: $primary;
+         font-weight: bold;
+    }
+    p{
+    }
+}

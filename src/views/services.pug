@@ -1,6 +1,11 @@
 // Variables
 - const title = "Services - Salon de toilettage chiens et chats à St-Égrève - Grenoble (38)"
 
+- const headerTitre = "Services"
+- const headerDescription = "Le toilettage en 6 étapes"
+- const headerImg = "img/blog/dog-attitude-toiletteur-grenoble-blog-2.jpeg"
+
+
 
 doctype
 html(lang="fr")
@@ -14,9 +19,17 @@ html(lang="fr")
 
         
         // Main
-        main(role="main")
-            section
-                include components/sections/_carousel.pug
+        main(role="main" class="bg-white")
+            include components/commun/_header_transition.pug
+            section.bg-white#section-second
+                include components/sections/_transition.pug
+            section.container
+                div.row.pb-5
+                    each col in [1,2,3,4,5,6]
+                        div.col-xl-4.col-md-6.col-sm-12.services
+                            div.services-card
+                                h3 Service #{col}
+                                p.text-white Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero quod autem corrupti blanditiis laboriosam, consectetur itaque consequuntur quaerat quibusdam in et pariatur beatae accusamus perspiciatis vitae doloremque quidem enim consequatur!
 
         // Footer
         include components/commun/_footer.pug
