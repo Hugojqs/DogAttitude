@@ -1,1 +1,23 @@
+- var facebook = {name: "facebook", url: "http://facebook.com"}
+- var twitter = {name: "twitter", url: "http://twitter.com"}
+- var instagram = {name: "instagram", url: "http://instagram.com"}
+
+- var reseaux = {facebook, twitter, instagram}
+
 footer(role="contentinfo")
+    div.flex-column.text-center.pt-3.pb-3
+        h2.text-white.pt-4.pb-2 Suivez-nous
+        ul.custom-footer-icon
+            each reseau in reseaux
+                li(class="icon-"+reseau.name)
+                    a(href=reseau.url)
+                        
+        h1.text-white.pb-2 Dog Attitude
+        ul.info-footer
+            li.pb-1
+                a(href="https://goo.gl/maps/ynCC1MhDpet") 2 Rue du 19 Mars 1962, 38120 Saint-Egrève
+            li.pb-1
+                a(href="mailto:contact@dogattitude.fr") contact@dogattitude.fr
+            li
+                a(href="tel:0608480253") 06 08 48 02 53
+

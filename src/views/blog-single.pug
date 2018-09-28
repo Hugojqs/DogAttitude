@@ -1,0 +1,56 @@
+- const headerTitre = "Titre de l'article"
+- const headerDescription = "Sous titre de l'article"
+- const headerImg = "img/blog/dog-attitude-toiletteur-grenoble-blog-5.jpg"
+
+
+doctype
+html(lang="fr")
+    include components/commun/_head.pug
+
+    // Body
+    body
+        // Header
+        include components/commun/_header.pug
+
+
+        
+        // Main
+        main(role="main" class="blog-single")
+            include components/commun/_header_transition.pug
+            div.container.bg-white.p-5.custom-blog-single-page
+                div.row.justify-content-center
+                    div.col-10.pt-5.custom-content-blog
+                        h3 Titre de niveau 3
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure reprehenderit ex ipsum illo ducimus expedita provident praesentium consectetur! Repellat eum possimus fuga itaque perspiciatis iusto vero rem a consectetur enim.
+    
+                        h4 Titre de niveau 4
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore necessitatibus natus provident iste tempora, laudantium sequi at vel corrupti consectetur totam et ad laborum ipsa, fuga dolore autem esse voluptate?
+
+                        div
+                            img(src=headerImg, alt="Image du blog", width="80%" height="auto")
+                            legend Sunt dolor culpa occaecat minim
+
+
+                        h4 Titre de niveau 4
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quisquam impedit, voluptates nam consequuntur ratione tempore, quasi officiis, tenetur recusandae dolore praesentium eaque quia. Aut voluptates doloremque similique minima quod!
+
+
+                        blockquote
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quisquam impedit, voluptates nam consequuntur ratione tempore, quasi officiis, tenetur recusandae dolore praesentium eaque quia. Aut voluptates doloremque similique minima quod!
+
+
+                        each val in [1, 2, 3]
+                            h4 Titre de niveau 4
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quisquam impedit, voluptates nam consequuntur ratione tempore, quasi officiis, tenetur recusandae dolore praesentium eaque quia. Aut voluptates doloremque similique minima quod!
+
+                            h3 Titre de niveau 3
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure reprehenderit ex ipsum illo ducimus expedita provident praesentium consectetur! Repellat eum possimus fuga itaque perspiciatis iusto vero rem a consectetur enim.
+    
+        // Footer
+        include components/commun/_footer.pug
+
+        // Scripts
+        include components/commun/_js.pug
+
+        
+        

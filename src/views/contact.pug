@@ -14,8 +14,14 @@ html(lang="fr")
 
         
         // Main
-        main(role="main")
-            section
+        main(role="main" id="page-contact")
+            section(id="section-second" class="bg-white")
+                include components/sections/_transition.pug
+
+            section.pb-5.pt-5
+                include components/sections/_contact.pug
+
+
 
         // Footer
         include components/commun/_footer.pug

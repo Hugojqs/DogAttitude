@@ -1,0 +1,57 @@
+// Variables
+- const title = "Blog - Salon de toilettage chiens et chats à St-Égrève - Grenoble (38)"
+- const blogArticle1 = {index: 1, titre : "Titre de l'article", category: "Alimentation", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-1.jpeg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle2 = {index: 2, titre : "Titre de l'article", category: "Activité", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-2.jpeg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle3 = {index: 3, titre : "Titre de l'article", category: "Activité", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-3.jpeg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle4 = {index: 4, titre : "Titre de l'article", category: "Alimentation", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-4.jpeg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle5 = {index: 5, titre : "Titre de l'article", category: "Alimentation", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-5.jpg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle6 = {index: 6, titre : "Titre de l'article", category: "Divers", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-6.jpg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle7 = {index: 7, titre : "Titre de l'article", category: "Alimentation", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-1.jpeg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle8 = {index: 8, titre : "Titre de l'article", category: "Alimentation", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-2.jpeg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle9 = {index: 9, titre : "Titre de l'article", category: "Divers", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-3.jpeg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle10 = {index: 10, titre : "Titre de l'article", category: "Activité", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-4.jpeg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle11 = {index: 11, titre : "Titre de l'article", category: "Alimentation", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-5.jpg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogArticle12 = {index: 12, titre : "Titre de l'article", category: "Activité", image: "img/blog/dog-attitude-toiletteur-grenoble-blog-6.jpg", url: "/blog-single.html", content: "Lorem ipsum"}
+- const blogs = {blogArticle1, blogArticle2, blogArticle3, blogArticle4, blogArticle5, blogArticle6, blogArticle7, blogArticle8, blogArticle9, blogArticle10,blogArticle11,blogArticle12}
+
+- const headerTitre = "Blog"
+- const headerDescription = "Toutes l'actualité du salon"
+- const headerImg = "img/dog-attitude-toiletteur-grenoble-blog.jpg"
+
+
+
+doctype
+html(lang="fr")
+    include components/commun/_head.pug
+
+    // Body
+    body
+        // Header
+        include components/commun/_header.pug
+
+
+        
+        // Main
+        main(role="main" class="bg-white")
+            include components/commun/_header_transition.pug
+
+            section.custom-blog.container
+                div.row.pb-5.pt-3.blog-wrapper
+                    each blogArticle in blogs
+                        -if(blogArticle.index%7 === 0 || blogArticle.index % 6 === 0 || blogArticle.index===1)
+                            div.col-xl-6.col-md-6.col-sm-12
+                                include components/sections/_blog-card.pug
+                        -else
+                            div.col-xl-3.col-md-6.col-sm-12
+                                include components/sections/_blog-card.pug
+
+
+
+        // Footer
+        include components/commun/_footer.pug
+
+        // Scripts
+        include components/commun/_js.pug
+
+        
+        

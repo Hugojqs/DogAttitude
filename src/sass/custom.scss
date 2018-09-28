@@ -42,3 +42,6 @@ $font-size-base: 0.9rem;
     right: 15%;
     text-align: left;
 }
+.form-control:focus{
+    box-shadow: none !important;
+}

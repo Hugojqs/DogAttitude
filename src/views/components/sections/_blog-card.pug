@@ -1,0 +1,6 @@
+div(class="blog p-3" style="background-image: url("+blogArticle.image+")")
+    div(class="blog-header")
+        h6.text-white #{blogArticle.category}
+        h3.font-weight-bold.text-white #{blogArticle.titre}
+    div(class="blog-footer")
+        a(class="btn btn-primary" href=blogArticle.url) Lire plus

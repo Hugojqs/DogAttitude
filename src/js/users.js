@@ -10,7 +10,6 @@ $.ajax({
     dataType: 'json',
     success: function(users) {
         $(users.results).each(function(index, user) {
-            console.log(user)
             $(".custom-testimonial > div:nth-child("+ (index+1) +") div.card-header img").attr('src', user.picture.large);
             $(".custom-testimonial > div:nth-child("+ (index+1) +") div.card-body h6.card-title").html(user.name.first + ' ' + user.name.last.toUpperCase());
             $(".custom-testimonial > div:nth-child("+ (index+1) +") div.card-body p.card-description").html(lorem[index]);

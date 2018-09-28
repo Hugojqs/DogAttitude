@@ -2,7 +2,7 @@
 
 each slide in sliders
     div(class= slide.index == 1 ? 'carousel-item active' : 'carousel-item')
-        img(src=slide.img, alt=slide.alt)
+        img(src=slide.img, alt=slide.alt srcset=slide.img)
         div.carousel-caption.custom-carousel-caption
             h3.font-weight-bold #{slide.title}
             h4.col-xl-6.col-md-8.col-sm-12.font-weight-bold #{slide.description}

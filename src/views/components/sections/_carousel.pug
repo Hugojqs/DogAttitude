@@ -1,9 +1,9 @@
-- var slide1 = {index: 1, img: "img/dog-attitude-toiletteur-grenoble-bain.jpg",     alt: "Photo d'une baignoire - Dog Attitude",            title: "01. Le bain",       description: "C'est pas la même baingnoire, mais l'idée y est.",    link: "/services", linkText: "Envie d'un bain"};
-- var slide2 = {index: 2, img: "img/dog-attitude-toiletteur-grenoble-coupe.jpg",    alt: "Photo d'un coiffeur - Dog Attitude",              title: "02. Le brossage",   description: "C'est pas les mêmes cheveux, mais l'idée y est.",     link: "/services", linkText: "Envie d'un brossage"};
-- var slide3 = {index: 3, img: "img/dog-attitude-toiletteur-grenoble-griffe.jpg",   alt: "Photo d'un chat et d'un canapé - Dog Attitude",   title: "03. Les griffes",   description: "C'est le moment de protéger votre canapé.",           link: "/services", linkText: "Envie d'un coupe ongle"};
-- var slide4 = {index: 4, img: "img/dog-attitude-toiletteur-grenoble-coupe.jpg",    alt: "Photo d'un coiffeur - Dog Attitude",              title: "04. La coupe",      description: "C'est pas les mêmes cheveux, mais l'idée y est.",     link: "/services", linkText: "Envie d'une coupe"};
-- var slide5 = {index: 5, img: "img/dog-attitude-toiletteur-grenoble-bain.jpg",     alt: "Photo d'une baignoire - Dog Attitude",            title: "05. Les yeux",      description: "C'est le moment de protéger votre canapé.",           link: "/services", linkText: "Envie d'un coupe ongle"};
-- var slide6 = {index: 6, img: "img/dog-attitude-toiletteur-grenoble-accueil.jpg",  alt: "Photo d'un coiffeur - Dog Attitude",              title: "06. Les dents",     description: "C'est pas la même baingnoire, mais l'idée y est.",    link: "/services", linkText: "Envie d'un bain"};
+- var slide1 = {index: 1, img: "img/slider/dog-attitude-toiletteur-grenoble-slider_02.jpg",     alt: "Photo d'une baignoire - Dog Attitude",            title: "01. Le bain",       description: "C'est pas la même baingnoire, mais l'idée y est.",    link: "/services", linkText: "Envie d'un bain"};
+- var slide2 = {index: 2, img: "img/slider/dog-attitude-toiletteur-grenoble-slider.jpg",    alt: "Photo d'un coiffeur - Dog Attitude",              title: "02. Le brossage",   description: "C'est pas les mêmes cheveux, mais l'idée y est.",     link: "/services", linkText: "Envie d'un brossage"};
+- var slide3 = {index: 3, img: "img/slider/dog-attitude-toiletteur-grenoble-slider_03.jpg",   alt: "Photo d'un chat et d'un canapé - Dog Attitude",   title: "03. Les griffes",   description: "C'est le moment de protéger votre canapé.",           link: "/services", linkText: "Envie d'un coupe ongle"};
+- var slide4 = {index: 4, img: "img/slider/dog-attitude-toiletteur-grenoble-slider_04.jpg",    alt: "Photo d'un coiffeur - Dog Attitude",              title: "04. La coupe",      description: "C'est pas les mêmes cheveux, mais l'idée y est.",     link: "/services", linkText: "Envie d'une coupe"};
+- var slide5 = {index: 5, img: "img/slider/dog-attitude-toiletteur-grenoble-slider.jpg",     alt: "Photo d'une baignoire - Dog Attitude",            title: "05. Les yeux",      description: "C'est le moment de protéger votre canapé.",           link: "/services", linkText: "Envie d'un coupe ongle"};
+- var slide6 = {index: 6, img: "img/slider/dog-attitude-toiletteur-grenoble-slider_02.jpg",  alt: "Photo d'un coiffeur - Dog Attitude",              title: "06. Les dents",     description: "C'est pas la même baingnoire, mais l'idée y est.",    link: "/services", linkText: "Envie d'un bain"};
 - var sliders = {slide1, slide2, slide3, slide4, slide5, slide6};
 
 
@@ -13,7 +13,7 @@ article(class="carousel slide" id="services-slider" data-ride="carousel" data-pa
         each slide in sliders
             li(class= slide.index == 1 ? 'active' : '' data-slide-to=slide.index-1 data-target="#services-slider")
 
-    div(class="custom-carousel-title bg-white")
+    div(class="custom-carousel-title bg-white pr-3 pt-1 pb-1")
         h2.font-weight-bold.text-secondary Le toilettage en 6 étapes
 
     div(class="carousel-inner" role="listbox")

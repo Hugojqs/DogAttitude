@@ -1,6 +1,6 @@
-- var testimonial1 = {img: "img/carre.jpg", alt: "Image", name: "", description: ""}
-- var testimonial2 = {img: "img/carre.jpg", alt: "Image", name: "", description: ""}
-- var testimonial3 = {img: "img/carre.jpg", alt: "Image", name: "", description: ""}
+- var testimonial1 = {img: "img/carre.jpg", alt: "Image", name: "Prénom NOM", description: "Problème API"}
+- var testimonial2 = {img: "img/carre.jpg", alt: "Image", name: "Prénom NOM", description: "Problème API"}
+- var testimonial3 = {img: "img/carre.jpg", alt: "Image", name: "Prénom NOM", description: "Problème API"}
 
 - var testimonials = {testimonial1, testimonial2, testimonial3}
 
@@ -13,9 +13,9 @@ article.container.custom-padding-top-100
             div.col-xl-4.col-md-6.col-sm-12
                 div.card
                     div.card-header
-                        img(class="img-thumbnail" src=testimonial.img, alt=testimonial.alt)
+                        img(class="img-thumbnail" src=testimonial.img, alt=testimonial.alt width="128" height="128")
 
                     div.card-body
-                        h6.card-title.text-secondary.font-weight-bold
-                        p.card-description.font-weight-light
+                        h6.card-title.text-secondary.font-weight-bold #{testimonial.name}
+                        p.card-description.font-weight-light #{testimonial.description}
 
