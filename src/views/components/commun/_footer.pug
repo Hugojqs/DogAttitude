@@ -15,9 +15,20 @@ footer(role="contentinfo")
         h1.text-white.pb-2 Dog Attitude
         ul.info-footer
             li.pb-1
-                a(href="https://goo.gl/maps/ynCC1MhDpet") 2 Rue du 19 Mars 1962, 38120 Saint-Egrève
+                a(data-toggle="modal" data-target="#modalGoogle" href="javascript.void(0);") 2 Rue du 19 Mars 1962, 38120 Saint-Egrève
             li.pb-1
                 a(href="mailto:contact@dogattitude.fr") contact@dogattitude.fr
             li
                 a(href="tel:0608480253") 06 08 48 02 53
 
+    div(class="modal fade" id="modalGoogle" tabindex="-1" role="dialog" aria-hidden="true")
+        div(class="modal-dialog modal-dialog-centered" role="document")
+            div.modal-content
+                div.modal-header
+                    h5.modal-title Venez nous voir au salon
+                    button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true") &times;
+                div.modal-body
+                    p Modal Body
+                div.modal-footer
+                    button(type="button" class="btn btn-primary" data-dismiss="modal") Fermer

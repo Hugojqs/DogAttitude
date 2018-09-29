@@ -2,3 +2,15 @@ section(class="pt-5 pb-5 header-transition" style="background-image: url("+heade
     div.container.text-center.pt-5.pb-2
         h1.font-weight-bold.text-primary #{headerTitre}
         h3.text-white #{headerDescription}
+
+        -if(admin)
+            div.container
+                form(action="admin.html", method="" class="row justify-content-center")
+                    div.col-xl-4.col-md-6.col-sm-8.col-12
+                        label(for="identifiant" class="text-white pt-5") Identifiant
+                        input(type="text" placeholder="contact@dogattitude.fr" name="identifiant" class="form-control")
+
+                        label(for="password" class="text-white pt-2") Mot de passe
+                        input(type="password" placeholder="password" name="password" class="form-control")
+
+                        input(type="submit" class="btn btn-primary mt-2" value="Se connecter")
