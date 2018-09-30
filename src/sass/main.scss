@@ -319,13 +319,13 @@ footer{
     margin-top: -95px;
 }
 .col-xl-3 .blog{
-    height: 300px;
+    height: 400px;
     width: 100%;
 }
 
 
 .col-xl-6 .blog{
-    height: 200px;
+    height: 300px;
     width: 100%;
 }
 .blog{
@@ -350,17 +350,17 @@ footer{
         margin-top: unset; 
     }
     .col-xl-6 .blog{
-        height: 300px;
+        height: 400px;
         width: 100%;
     }
 }
 @media (max-width: 768px){
     .col-md-6 .blog{
-        height: 200px;
+        height: 300px;
         width: 100%;
     }
     .col-xl-6 .blog{
-        height: 200px;
+        height: 300px;
         width: 100%;
     }
     .blog-wrapper .col-xl-3:nth-child(5n), .blog-wrapper .col-xl-3:nth-child(4), .blog-wrapper .col-xl-3:nth-child(11){
@@ -483,4 +483,12 @@ $services-images-lists:
 }
 .custom-stat-page{
     border-radius: 6px !important;
+}
+
+.table-admin tbody tr:hover {
+    background-color: $primary;
+    cursor: pointer;
+}
+.table th, .table td{
+    vertical-align: middle !important;
 }

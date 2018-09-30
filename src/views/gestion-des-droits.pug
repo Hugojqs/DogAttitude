@@ -1,5 +1,23 @@
-// Variables
-- const title = "Gestion des droits"
+- const title = "Gestion des droits - Dog Attitude"
+
+- const user0 = { id: 0, nom: 'Mullen', prenom: 'Karyn', email: 'Mullen@dogattitude.com', lastCo: '27/05/2018', rule: 'Editeur'}
+- const user1 = { id: 1, nom: 'Morris', prenom: 'Carmella', email: 'Morris@dogattitude.com', lastCo: '27/05/2018', rule: 'Admin'}
+- const user2 = { id: 2, nom: 'Chang', prenom: 'Justice', email: 'Chang@dogattitude.com', lastCo: '27/05/2018', rule: 'Expert SEO'}
+- const user3 = { id: 3, nom: 'Lambert', prenom: 'Leann', email: 'Lambert@dogattitude.com', lastCo: '27/05/2018', rule: 'Auteur'}
+- const user4 = { id: 4, nom: 'Trevino', prenom: 'Booth', email: 'Trevino@dogattitude.com', lastCo: '27/05/2018', rule: 'Auteur'}
+- const user5 = { id: 5, nom: 'Harmon', prenom: 'Barr', email: 'Harmon@dogattitude.com', lastCo: '27/05/2018', rule: 'Contributeur'}
+- const user6 = { id: 6, nom: 'Warner', prenom: 'Young', email: 'Warner@dogattitude.com', lastCo: '27/05/2018', rule: 'Editeur'}
+- const user7 = { id: 7, nom: 'Zamora', prenom: 'Glenda', email: 'Zamora@dogattitude.com', lastCo: '27/05/2018', rule: 'Contributeur'}
+- const user8 = { id: 8, nom: 'Hampton', prenom: 'Gonzales', email: 'Hampton@dogattitude.com', lastCo: '27/05/2018', rule: 'Auteur'}
+- const user9 = { id: 9, nom: 'Fuller', prenom: 'Mildred', email: 'Fuller@dogattitude.com', lastCo: '27/05/2018', rule: 'Contributeur'}
+- const user10 = { id: 10, nom: 'Ray', prenom: 'Garcia', email: 'Ray@dogattitude.com', lastCo: '27/05/2018', rule: 'Auteur'}
+- const user11 = { id: 11, nom: 'Evans', prenom: 'Anthony', email: 'Evans@dogattitude.com', lastCo: '27/05/2018', rule: 'Auteur'}
+- const user12 = { id: 12, nom: 'Cantu', prenom: 'Angie', email: 'Cantu@dogattitude.com', lastCo: '27/05/2018', rule: 'Contributeur'}
+- const user13 = { id: 13, nom: 'Ayala', prenom: 'Alexandria', email: 'Ayala@dogattitude.com', lastCo: '27/05/2018', rule: 'Contributeur'}
+- const user14 = { id: 14, nom: 'Waters', prenom: 'Nanette', email: 'Waters@dogattitude.com', lastCo: '27/05/2018', rule: 'Expert SEO'}
+- const user15 = { id: 15, nom: 'Mosley', prenom: 'Michelle', email: 'Mosley@dogattitude.com', lastCo: '27/05/2018', rule: 'Admin'}
+
+- const users = {user0, user1, user2, user3, user4, user5, user6, user7, user8, user9, user10, user11, user12, user13, user14, user15}
 
 
 doctype
@@ -12,7 +30,30 @@ html(lang="fr")
         include components/commun/_header_admin.pug
 
         // Main
-        main(role="main" id="admin-page")
+        main(role="main" class="custom-padding-top-100")
+            div.container.bg-white.p-5.custom-stat-page
+                table(class="table text-center table-admin")
+                    thead
+                        tr
+                            th(scope="col") #
+                            th(scope="col") Nom
+                            th(scope="col") Prénom
+                            th(scope="col") Email
+                            th(scope="col") Dernière connexion 
+                            th(scope="col") Rôle
+                            th(scope="col") Actions
+                    tbody
+                        each user in users
+                            tr
+                                th(scope="row") #{user.id}
+                                td #{user.nom}
+                                td #{user.prenom}
+                                td #{user.email}
+                                td #{user.lastCo}
+                                td #{user.rule}
+                                td 
+                                    a(class="btn btn-secondary text-white") Éditer
+                   
 
 
         // Scripts
