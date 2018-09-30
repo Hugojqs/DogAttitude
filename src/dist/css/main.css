@@ -6707,3 +6707,30 @@ footer {
     text-align: center;
     color: #e91e63;
     font-weight: bold; }
+
+/*** PopUp Google Maps ***/
+.modal-header {
+  border-radius: 6px !important;
+  border-bottom: none;
+  margin: -20px 15px 0 15px;
+  padding: 17px 10px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+
+#googleMaps {
+  width: 100% !important;
+  height: 300px !important; }
+
+.btn-close-gmaps {
+  position: absolute;
+  bottom: 20px;
+  left: 20px; }
+
+/*** Page Statistique ***/
+#embed-api-auth-container:nth-child(1) > div {
+  display: block !important; }
+
+#embed-api-auth-container div:nth-child(2) {
+  display: none !important; }
+
+.custom-stat-page {
+  border-radius: 6px !important; }

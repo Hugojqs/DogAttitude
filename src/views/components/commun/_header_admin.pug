@@ -1,4 +1,8 @@
-- var items = {"/statistiques.html": "Statistiques", "/gestion-des-droits.html": "Gestion des droits utilisateurs"}
+- if(admin)
+    - var connexion = "Connexion"
+- else
+    - var connexion = "Se déconnecter"
+- var items = {"/statistiques.html": "Statistiques", "/gestion-des-droits.html": "Gestion des droits utilisateurs", '/admin.html': connexion}
 
 header(role="banner")
     nav(role="navigation" class="navbar navbar-expand-md container")

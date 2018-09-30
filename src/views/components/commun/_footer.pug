@@ -24,11 +24,10 @@ footer(role="contentinfo")
     div(class="modal fade" id="modalGoogle" tabindex="-1" role="dialog" aria-hidden="true")
         div(class="modal-dialog modal-dialog-centered" role="document")
             div.modal-content
-                div.modal-header
-                    h5.modal-title Venez nous voir au salon
-                    button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                div.modal-header.bg-primary
+                    h5.modal-title.pl-3.text-white.font-weight-bold Venez nous voir au salon
+                    button(type="button" class="close text-white" data-dismiss="modal" aria-label="Close")
                         span(aria-hidden="true") &times;
                 div.modal-body
-                    p Modal Body
-                div.modal-footer
-                    button(type="button" class="btn btn-primary" data-dismiss="modal") Fermer
+                    div#googleMaps
+                    button(type="button" class="btn btn-primary btn-close-gmaps" data-dismiss="modal") Fermer

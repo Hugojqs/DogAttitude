@@ -46,6 +46,13 @@ gulp.task("imp-jquery", () => {
     .pipe(gulp.dest("dist/vendors/jquery"));
 });
 
+// Importer GMaps
+gulp.task("imp-gmaps", () => {
+  return gulp
+    .src(["node_modules/gmaps/gmaps.min.js"])
+    .pipe(gulp.dest("dist/vendors/gmaps"));
+});
+
 gulp.task("img", () =>{
   return gulp.src("img/**/*")
   .pipe(gulp.dest("dist/img"))
@@ -78,6 +85,7 @@ gulp.task("default", [
   "js",
   "imp-bootstrap",
   "imp-jquery",
+  "imp-gmaps",
   "img",
   "build"
 ]);

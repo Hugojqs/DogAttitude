@@ -1,5 +1,5 @@
-// Variables
-- const title = "Statistique"
+- const title = "Statistiques - Dog Attitude"
+
 
 doctype
 html(lang="fr")
@@ -11,10 +11,25 @@ html(lang="fr")
         include components/commun/_header_admin.pug
 
         // Main
-        main(role="main" id="admin-page")
+        main(role="main" class="custom-padding-top-100")
+            div.container.bg-white.p-5.custom-stat-page
+                div.row.justify-content-center.pb-3
+                    div(id="embed-api-auth-container")
+                div.row.pb-3
+                    div(id="view-selector-container" class="col-12 d-flex flex-row flex-wrap")
+                
+                div.row 
+                    div(id="chart-container" class="col-12")
+                    div(id="chart-1-container" class="col-xl-6 col-md-12")
+                    div(id="chart-2-container" class="col-xl-6 col-md-12")
+                    div(id="chart-3-container" class="col-12")
+
+                    
 
 
         // Scripts
         include components/commun/_js.pug
+        script(type="text/javascript" src="https://www.google.com/jsapi")
+        script(src="js/analytics.js" type="text/javascript")
 
         

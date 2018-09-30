@@ -24,3 +24,21 @@ $(document).ready(function() {
     $("header nav").addClass("navbar-light");
   });
 });
+
+/*** GMaps ***/
+if($('#googleMaps').length > 0){
+  var gMaps = new GMaps({
+    el: '#googleMaps',
+    lat: 45.2240624,
+    lng: 5.6888814999999795,
+    zoom: 17,
+  });
+  gMaps.addMarker({
+    lat: 45.2240624,
+    lng: 5.6888814999999795,
+    icon: 'img/icon/placeholder.png',
+    infoWindow: {
+      content: '<h3 class="text-primary">Dog Attitude</h3><h6>2 Rue du 19 Mars 1962,<br> 38120 Saint-Egrève</h6>'
+    }
+  })
+}
