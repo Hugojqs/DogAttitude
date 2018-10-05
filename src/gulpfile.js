@@ -25,7 +25,7 @@ gulp.task("sass", () => {
 gulp.task("js", () => {
   return gulp
     .src("js/**/*.js")
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
 
